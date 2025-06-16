@@ -1,68 +1,93 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.appHome {
+  height: 200vh;
+  width: 100vw;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+.homeBody {
+  border: 1px solid;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/6210449/pexels-photo-6210449.jpeg?cs=srgb&dl=pexels-picha-6210449.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  .overlay {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.357);
+    .menuHome {
+      position: fixed;
+      height: 15vh;
+      display: flex;
+      gap: 13vw;
+      color: white;
+      font-size: 2em;
+      letter-spacing: 2px;
+      .logo {
+        border: 1px solid white;
+        width: 30vw;
+        height: 8vh;
+        cursor: pointer;
+      }
+      .user {
+        cursor: pointer;
+        padding-top: 1vh;
+        height: 8vh;
+        border: 1px solid;
+        width: 20vw;
+        justify-content: center;
+        text-align: center;
+      }
+      .burger {
+        height: 8vh;
+        border: 1px solid;
+        width: 20vw;
+        padding-top: 2vh;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        .lanes {
+          cursor: pointer;
+          display: flex;
+          height: 3vh;
+          flex-direction: column;
+          gap: 1vh;
+          div {
+            background-color: white;
+            height: 0.2vh;
+            width: 8vw;
+          }
+        }
+      }
+    }
+    .bodyb {
+      height: 58vh;
+      padding-top: 18vh;
+      h2 {
+        text-align: center;
+        padding-top: 10vh;
+        height: 20vh;
+        font-size: 3em;
+      }
+    }
+    .openBooking {
+      height: 40vh;
+      text-align: center;
+      h3 {
+        font-size: 2em;
+        height: 30vh;
+        padding-top: 20vh;
+        text-align: center;
+      }
+      button {
+        border: none;
+        color: rgba(0, 0, 0, 0.708);
+        cursor: pointer;
+        padding: 2vw;
+        font-size: 1.4em;
+        background-color: wheat;
+      }
+    }
   }
 }
