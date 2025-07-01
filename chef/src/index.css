@@ -2,6 +2,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .appHome {
   height: 200vh;
   width: 100vw;
@@ -16,51 +20,7 @@
   .overlay {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.357);
-    .menuHome {
-      position: fixed;
-      height: 15vh;
-      display: flex;
-      gap: 13vw;
-      color: white;
-      font-size: 2em;
-      letter-spacing: 2px;
-      .logo {
-        border: 1px solid white;
-        width: 30vw;
-        height: 8vh;
-        cursor: pointer;
-      }
-      .user {
-        cursor: pointer;
-        padding-top: 1vh;
-        height: 8vh;
-        border: 1px solid;
-        width: 20vw;
-        justify-content: center;
-        text-align: center;
-      }
-      .burger {
-        height: 8vh;
-        border: 1px solid;
-        width: 20vw;
-        padding-top: 2vh;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        .lanes {
-          cursor: pointer;
-          display: flex;
-          height: 3vh;
-          flex-direction: column;
-          gap: 1vh;
-          div {
-            background-color: white;
-            height: 0.2vh;
-            width: 8vw;
-          }
-        }
-      }
-    }
+
     .bodyb {
       height: 58vh;
       padding-top: 18vh;
@@ -89,5 +49,59 @@
         background-color: wheat;
       }
     }
+  }
+}
+.menuHome {
+  position: fixed;
+  height: 15vh;
+  display: flex;
+  gap: 13vw;
+  color: white;
+  font-size: 2em;
+  letter-spacing: 2px;
+  .logo {
+    border: 1px solid white;
+    width: 30vw;
+    height: 8vh;
+    cursor: pointer;
+  }
+  .user {
+    cursor: pointer;
+    padding-top: 1vh;
+    height: 8vh;
+    border: 1px solid;
+    width: 20vw;
+    justify-content: center;
+    text-align: center;
+  }
+  .burger {
+    height: 8vh;
+    border: 1px solid;
+    width: 20vw;
+    padding-top: 2vh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    .lanes {
+      cursor: pointer;
+      display: flex;
+      height: 3vh;
+      flex-direction: column;
+      gap: 1vh;
+      div {
+        background-color: white;
+        height: 0.2vh;
+        width: 8vw;
+      }
+    }
+  }
+}
+.productpage {
+  height: 100vh;
+  width: 100vw;
+  .overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.451);
   }
 }
