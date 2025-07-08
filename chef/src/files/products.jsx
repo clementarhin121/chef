@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Menu from "../components/menu";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [prods, setProds] = useState([]);
@@ -10,8 +11,14 @@ function Products() {
       .catch((err) => console.error("fetch error:", err));
   }, []);
 
+  const nav = useNavigate();
+
+  const About = (id) => {
+    nav(`/${id}`);
+  };
+
   const list = prods.map((d) => (
-    <ul>
+    <ul onClick={() => About(d.product_id)}>
       <li key={d.product_id}>
         <h1>{d.product_name}</h1>
         <img

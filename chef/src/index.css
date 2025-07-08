@@ -143,3 +143,48 @@ li {
     }
   }
 }
+
+.aboutPbody {
+  height: 200vh;
+  width: 100vw;
+  background-image: url("https://images.pexels.com/photos/6210449/pexels-photo-6210449.jpeg?cs=srgb&dl=pexels-picha-6210449.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .overlay {
+    height: 200vh;
+    width: 100vw;
+    background-color: rgba(26, 26, 26, 0.567);
+    .listItems {
+      color: white;
+      height: 100vh;
+      padding-left: 30vw;
+      .listSlide {
+        padding-top: 5vh;
+        height: 100vh;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+
+        ul {
+          width: 46vw;
+          height: 40vh;
+          cursor: pointer;
+          text-align: center;
+          background-color: rgb(255, 111, 0);
+          padding-top: 1vh;
+          transition: 0.4s;
+          li {
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+          }
+        }
+        ul:hover {
+          scale: 1.02;
+        }
+      }
+    }
+  }
+}

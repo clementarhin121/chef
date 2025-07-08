@@ -27,6 +27,19 @@ app.get("/db", (req, res) => {
   });
 });
 
+app.get("/db/:id", (req, res) => {
+  const mysql = `select * from products 
+                where product_id = ?`;
+
+  const values = [req.params.id];
+
+  db.query(mysql, values, (err, data) => {
+    if (err) return "sorry";
+
+    return res.json(data);
+  });
+});
+
 app.listen(port, () => {
   console.log(`listening on ${port}`);
 });
