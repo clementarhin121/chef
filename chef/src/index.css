@@ -2,17 +2,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 li {
   list-style: none;
 }
+
 .appHome {
   height: 200vh;
   width: 100vw;
 }
+
 .homeBody {
   border: 1px solid;
   height: 100vh;
@@ -20,129 +24,217 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  .overlay {
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.357);
-
-    .bodyb {
-      height: 58vh;
-      padding-top: 18vh;
-      h2 {
-        text-align: center;
-        padding-top: 10vh;
-        height: 20vh;
-        font-size: 3em;
-      }
-    }
-    .openBooking {
-      height: 40vh;
-      text-align: center;
-      h3 {
-        font-size: 2em;
-        height: 30vh;
-        padding-top: 20vh;
-        text-align: center;
-      }
-      button {
-        border: none;
-        color: rgba(0, 0, 0, 0.708);
-        cursor: pointer;
-        padding: 2vw;
-        font-size: 1.4em;
-        background-color: wheat;
-      }
-    }
-  }
+  position: relative;
 }
+
+.homeBody .overlay {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.357);
+}
+
+.overlay .bodyb {
+  height: 58vh;
+  padding-top: 18vh;
+}
+
+.overlay .bodyb h2 {
+  text-align: center;
+  padding-top: 10vh;
+  height: 20vh;
+  font-size: 3em;
+}
+
+.overlay .openBooking {
+  height: 40vh;
+  text-align: center;
+}
+
+.openBooking h3 {
+  font-size: 2em;
+  height: 30vh;
+  padding-top: 20vh;
+  text-align: center;
+}
+
+.openBooking button {
+  border: none;
+  color: rgba(0, 0, 0, 0.708);
+  cursor: pointer;
+  padding: 2vw;
+  font-size: 1.4em;
+  background-color: wheat;
+}
+
+/* === MENU STYLES === */
+
 .menuHome {
   position: fixed;
+  top: 0;
   height: 15vh;
+  width: 100%;
   display: flex;
   gap: 13vw;
   color: white;
   font-size: 2em;
   letter-spacing: 2px;
-  .logo {
-    border: 1px solid white;
-    width: 30vw;
-    height: 8vh;
-    cursor: pointer;
-  }
-  .user {
-    cursor: pointer;
-    padding-top: 1vh;
-    height: 8vh;
-    border: 1px solid;
-    width: 20vw;
-    justify-content: center;
-    text-align: center;
-  }
-  .burger {
-    height: 8vh;
-    border: 1px solid;
-    width: 20vw;
-    padding-top: 2vh;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    .lanes {
-      cursor: pointer;
-      display: flex;
-      height: 3vh;
-      flex-direction: column;
-      gap: 1vh;
-      div {
-        background-color: white;
-        height: 0.2vh;
-        width: 8vw;
-      }
-    }
-  }
+  z-index: 100;
 }
+
+.menuHome .logo {
+  border: 1px solid white;
+  width: 30vw;
+  height: 8vh;
+  cursor: pointer;
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  padding-left: 1vw;
+  position: relative;
+}
+
+.logo h2 {
+  width: 18vw;
+}
+
+.logo .sino {
+  width: 6vw;
+  height: 5vh;
+  border-radius: 100%;
+  margin-top: 0.2vh;
+  text-align: center;
+  padding-top: 0vh;
+  padding-left: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Dropdown toggle: sinotab */
+
+.sinotab {
+  display: flex;
+  gap: 1vw;
+  width: 22vw;
+  position: absolute;
+  top: 8vh;
+  left: 7vw;
+  padding: 1vh;
+  border-radius: 5px;
+  visibility: hidden;
+  font-size: 0.8em;
+}
+
+.sinotab.activate {
+  visibility: visible;
+}
+
+.sinotab p {
+  font-size: 0.6em;
+  color: white;
+  cursor: pointer;
+}
+
+.sinotab p:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* User Icon */
+
+.menuHome .user {
+  cursor: pointer;
+  padding-top: 1vh;
+  height: 8vh;
+  border: 1px solid;
+  width: 20vw;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Burger Menu */
+
+.menuHome .burger {
+  height: 8vh;
+  border: 1px solid;
+  width: 20vw;
+  padding-top: 2vh;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.burger .lanes {
+  cursor: pointer;
+  display: flex;
+  height: 3vh;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.lanes div {
+  background-color: white;
+  height: 0.2vh;
+  width: 8vw;
+}
+
+/* === PRODUCT PAGE === */
+
 .productpage {
+  border: 1px solid;
   height: 200vh;
   width: 100vw;
   background-image: url("https://images.pexels.com/photos/6210449/pexels-photo-6210449.jpeg?cs=srgb&dl=pexels-picha-6210449.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  .overlay {
-    height: 200vh;
-    width: 100vw;
-    background-color: rgba(26, 26, 26, 0.567);
-    .listItems {
-      color: white;
-      height: 100vh;
-      padding-left: 30vw;
-      .listSlide {
-        padding-top: 5vh;
-        height: 100vh;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        gap: 4vh;
-
-        ul {
-          width: 46vw;
-          height: 40vh;
-          cursor: pointer;
-          text-align: center;
-          background-color: rgb(255, 111, 0);
-          padding-top: 1vh;
-          transition: 0.4s;
-          li {
-            width: 30vw;
-            display: flex;
-            flex-direction: column;
-            gap: 2vh;
-          }
-        }
-        ul:hover {
-          scale: 1.02;
-        }
-      }
-    }
-  }
+  position: relative;
 }
+
+.productpage .overlay {
+  height: 200vh;
+  width: 100vw;
+  background-color: rgba(26, 26, 26, 0.567);
+}
+
+.overlay .listItems {
+  padding-top: 18vh;
+  color: white;
+  height: 200vh;
+  padding-left: 30vw;
+  display: flex;
+}
+
+.listItems .listSlide {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.listSlide ul {
+  width: 46vw;
+  height: 40vh;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(255, 111, 0);
+  padding-top: 1vh;
+  transition: 0.4s;
+}
+
+.listSlide ul:hover {
+  scale: 1.02;
+}
+
+.listSlide li {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+/* === ABOUT PAGE === */
 
 .aboutPbody {
   height: 200vh;
@@ -150,41 +242,45 @@ li {
   background-image: url("https://images.pexels.com/photos/6210449/pexels-photo-6210449.jpeg?cs=srgb&dl=pexels-picha-6210449.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  .overlay {
-    height: 200vh;
-    width: 100vw;
-    background-color: rgba(26, 26, 26, 0.567);
-    .listItems {
-      color: white;
-      height: 100vh;
-      padding-left: 30vw;
-      .listSlide {
-        padding-top: 5vh;
-        height: 100vh;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        gap: 4vh;
+}
 
-        ul {
-          width: 46vw;
-          height: 40vh;
-          cursor: pointer;
-          text-align: center;
-          background-color: rgb(255, 111, 0);
-          padding-top: 1vh;
-          transition: 0.4s;
-          li {
-            width: 30vw;
-            display: flex;
-            flex-direction: column;
-            gap: 2vh;
-          }
-        }
-        ul:hover {
-          scale: 1.02;
-        }
-      }
-    }
-  }
+.aboutPbody .overlay {
+  height: 200vh;
+  width: 100vw;
+  background-color: rgba(26, 26, 26, 0.567);
+}
+
+.overlay .listItems {
+  color: white;
+  padding-left: 30vw;
+}
+
+.listItems .listSlide {
+  padding-top: 5vh;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.listSlide ul {
+  width: 46vw;
+  height: 40vh;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(255, 111, 0);
+  padding-top: 1vh;
+  transition: 0.4s;
+}
+
+.listSlide ul:hover {
+  scale: 1.02;
+}
+
+.listSlide li {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }

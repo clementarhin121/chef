@@ -11,9 +11,7 @@ function Home() {
       <div className="homeBody">
         <div className="overlay">
           <Menu></Menu>
-          <div className="bodyb">
-            <h2>Where Cultures Meet Food!</h2>
-          </div>
+          <div className="bodyb"></div>
           <div className="openBooking">
             <h3>Open For Lunch, Dinner</h3>
             <button onClick={goProducts}>PLACE &nbsp; ORDERS</button>
